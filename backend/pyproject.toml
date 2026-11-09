@@ -1,0 +1,23 @@
+[project]
+name = "car-maintenance-api"
+version = "0.1.0"
+description = "Car maintenance schedule API"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "pydantic>=2.9",
+    "boto3>=1.35",
+    "mangum>=0.19",
+    "uvicorn>=0.32",
+    "tzdata>=2024.1",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.16.0",
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
